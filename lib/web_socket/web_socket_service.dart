@@ -118,12 +118,12 @@ class WebSocketService {
     webSocketChannel.sink.add(jsonEncode(msg));
   }
 
-  void sendUserPresence(WebSocketChannel webSocketChannel) {
+  void sendUserPresence(WebSocketChannel webSocketChannel, String status) {
     Map msg = {
       "msg": "method",
       "method": "UserPresence:setDefaultStatus",
       "id": "42",
-      "params": ["online"]
+      "params": [status]
     };
     webSocketChannel.sink.add(jsonEncode(msg));
   }
