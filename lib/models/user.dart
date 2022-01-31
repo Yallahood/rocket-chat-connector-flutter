@@ -11,7 +11,7 @@ class User {
   String? status;
   String? statusConnection;
   String? username;
-  int? utcOffset;
+  var utcOffset;
   bool? active;
   List<String>? roles;
   Map<String, Preferences>? settings;
